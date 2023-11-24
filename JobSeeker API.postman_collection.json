@@ -1,0 +1,117 @@
+{
+	"info": {
+		"_postman_id": "ce276062-3dcc-4123-8f67-c375db14660d",
+		"name": "JobSeeker API",
+		"description": "Job Seeker API documentation",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "18931985"
+	},
+	"item": [
+		{
+			"name": "Index Get All",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{localhostapi}}/candidate",
+					"host": [
+						"{{localhostapi}}"
+					],
+					"path": [
+						"candidate"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Send Store Post",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"email\" : \"testing@gmail.com\",\r\n    \"phone_number\" : \"089921893819\",\r\n    \"full_name\" : \"Joshua Pratama Silitonga\",\r\n    \"dob\" : \"2001-06-06\",\r\n    \"pob\": \"Ambon\",\r\n    \"gender\" : \"m\",\r\n    \"year_exp\" : \"5\",\r\n    \"last_salary\" : \"8750000\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{localhostapi}}/candidate",
+					"host": [
+						"{{localhostapi}}"
+					],
+					"path": [
+						"candidate"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Show id (specify)",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{localhostapi}}/candidate/1",
+					"host": [
+						"{{localhostapi}}"
+					],
+					"path": [
+						"candidate",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Send Update Patch",
+			"request": {
+				"method": "PATCH",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"email\" : \"testing123@gmail.com\",\r\n    \"phone_number\" : \"089121893819\",\r\n    \"full_name\" : \"Joshua Tumakaka\",\r\n    \"dob\" : \"2000-02-01\",\r\n    \"pob\": \"Aceh\",\r\n    \"gender\" : \"M\",\r\n    \"year_exp\" : \"2\",\r\n    \"last_salary\" : \"9750000\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{localhostapi}}/candidate/101",
+					"host": [
+						"{{localhostapi}}"
+					],
+					"path": [
+						"candidate",
+						"101"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete (destroy)",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "{{localhostapi}}/candidate/102",
+					"host": [
+						"{{localhostapi}}"
+					],
+					"path": [
+						"candidate",
+						"102"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
